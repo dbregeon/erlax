@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+commands = ['scaffold']
+
+if commands.include?(ARGV.first) 
+    require  File.expand_path(File.dirname(__FILE__) + '/../lib/' + ARGV.shift)
+else
+    puts <<-USAGE
+Erlax enables to scaffold erlang projects driven by cucumber.
+
+Usage: erlax <command> <topic> <name>
+
+Examples:
+    erlax scaffold project my_project
+    erlax scaffold feature my_awesome_feature
+    erlax scaffold entity my_business_entity
+    erlax scaffold server my_service_server
+
+USAGE
+end
+

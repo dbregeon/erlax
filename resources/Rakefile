@@ -1,0 +1,11 @@
+# Thanks to http://21ccw.blogspot.com/2008/04/using-rake-for-erlang-unit-testing.html
+# And http://seangeo.blogspot.com/2007/09/building-erlang-with-rake.html
+# And http://medevyoujane.com/blog/2008/8/21/erlang-make-rake-and-emake.html
+
+require 'rake'
+require 'rake/clean'
+
+require 'tasks/cucumber'
+require 'tasks/erlang'
+
+task :default => 'erlang:compile'
